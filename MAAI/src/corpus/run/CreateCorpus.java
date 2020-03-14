@@ -2,13 +2,10 @@ package corpus.run;
 
 import corpus.factory.CorpusFactory;
 import corpus.model.MyFile;
-import corpus.model.Page;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CreateCorpus {
         public static final String PATHNAME = "ressources/";
@@ -22,23 +19,6 @@ public class CreateCorpus {
             CorpusFactory factory = new CorpusFactory();
             MyFile newCorpus=factory.createCorpusFile(PATHNAME.concat(FILENAME_SOURCE),PATHNAME.concat(FILENAME_NEWCORPUS),ROOT_NEWCORPUS,CONTENT);
             newCorpus.write();
-           /* MyFile source = new MyFile(PATHNAME.concat(FILENAME));
-            List<Page> pages = source.getPages();
-            List<Page> selectedpages = new ArrayList<>();
-            System.out.println("SIZE :"+ pages.size());
-            int i=0;
-            while (i<pages.size()) { ;
-                    if(pages.get(i).wordFrequency(CONTENT)>0){
-                        selectedpages.add(pages.get(i));
-                    }
-                    i++;
-            }
-            MyFile corpus=new MyFile(PATHNAME.concat(FILE_CORPUS),ROOT_CORPUS,selectedpages);
-            corpus.write();
-
-            */
-
-
 
         }
 }
