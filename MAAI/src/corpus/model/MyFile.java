@@ -1,6 +1,9 @@
 package corpus.model;
 
-import org.w3c.dom.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -36,6 +39,7 @@ public class MyFile {
         this.pathname=pathname;
         createDocument();
         this.pages=getListOfPages();
+        index = new Index(pages);
     }
 
     /**
@@ -52,7 +56,7 @@ public class MyFile {
         this.pages=pages;
         createNewDocument();
         addElement(root);
-       // index = new Index(pages);
+        index = new Index(pages);
     }
 
     /**
@@ -176,6 +180,9 @@ public class MyFile {
     }
 
 
+    public Index getIndex() {
+        return index;
+    }
 
 }
 

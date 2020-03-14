@@ -1,6 +1,7 @@
 package corpus.model;
 
-import org.w3c.dom.*;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
