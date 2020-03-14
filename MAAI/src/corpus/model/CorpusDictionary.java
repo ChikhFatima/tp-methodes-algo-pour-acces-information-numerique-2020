@@ -1,10 +1,12 @@
 package corpus.model;
 
+import java.util.Arrays;
 import java.util.Hashtable;
 
-public class Dictionary {
+public class CorpusDictionary {
     private Hashtable<String, Integer> hashTable;
-    public Dictionary() {
+
+    public CorpusDictionary() {
         this.hashTable = new Hashtable();
     }
 
@@ -22,6 +24,6 @@ public class Dictionary {
 
 
     public void show(){
-
+        //System.out.println(Arrays.toString());
     }
 }
